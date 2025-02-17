@@ -1,0 +1,21 @@
+name: Generate Documentation
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+    id-token: write
+    pages: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Upload all to Google Drive (optional)
+        uses: izzalDev/google-drive-upload-git-action@main
+        with:
+          filename: README.md
