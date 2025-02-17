@@ -16,6 +16,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Upload all to Google Drive (optional)
-        uses: izzalDev/google-drive-upload-git-action@main
+        uses: izzalDev/gdrive-upload-action@main
         with:
           filename: README.md
